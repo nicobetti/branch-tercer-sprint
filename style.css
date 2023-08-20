@@ -1,0 +1,132 @@
+* {
+    font-style: sans-serif;
+}
+
+header {
+    background-color: darkblue;
+    color: whitesmoke;
+}
+
+footer {
+    background-color: darkblue;
+    color: whitesmoke;
+    margin-top: 3rem;
+}
+
+h1 {
+   align-self: center;
+   text-align: center;
+}
+
+h3 {
+    align-self: center;
+    text-align: center;
+}
+
+ul {
+    list-style-type:none;
+}
+
+ul li {
+    margin: 5px;
+}
+
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login {
+    border: solid 1px black;
+    width: 70vw;
+    padding: 10px;
+    background-color: lightgrey;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formulario input {
+    margin-bottom: 20px;
+    width: 80%;
+    align-self: center;
+}
+
+.formulario label {
+    margin-left: 1.5rem;
+}
+
+#boton {
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: darkblue;
+    width: 40%;
+    align-self: center;
+}
+
+.menu-desplegado {
+    display: none;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.logo {
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    width: 35%;
+    display: inline-block;
+}
+
+#foto-logo {
+    max-width: 200px;
+}
+
+.btn-dark {
+    margin: 10px;
+}
+
+#cuenta {
+    text-align: left;
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+    
+    nav ul {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 100px;
+    }
+
+    .formulario label {
+        margin-left: 3.5rem;
+    }
+
+    .menu-desplegado {
+        display: block;
+    }
+
+    .dropdown {
+        display: none;
+    }
+}
