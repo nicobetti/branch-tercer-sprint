@@ -23,52 +23,52 @@
             </ul>
         </div>
         <img src="images/logo-itbank.png" alt="Logo del banco" class="logo img-fluid mx-auto d-block" id="foto-logo">
-        <nav class="menu-desplegado">
-            <ul>
-                <li><a href="index.html"> Inicio <i class="fa-solid fa-house"></i></a></li>
-                <li><a href="cuentas.html">Cuentas <i class="fa-solid fa-credit-card"></i></a></li>
-                <li><a href="pagos.html">Pagos <i class="fa-solid fa-receipt"></i></a></li>
-                <li><a href="transferencias.html">Transferencias <i class="fa-solid fa-arrow-right-arrow-left"></i></a></li>
-                <li><a href="conversor.html">Conversor de monedas <i class="fa-solid fa-dollar-sign"></i></a></li>
-            </ul>
-        </nav>
-        <div>
-        </div>
-    </header>
-<div class="container mt-3">
-  <h2>Transferencias enviadas/recibidas</h2>
-  <p>ATENCION: Recuerde verificar la identidad de los destinatarios y transferir solamente a personas de confianza. En caso de recibir transferencias por error, por favor contacte al banco inmediatamente.</p>            
-  <table class="table table-hover">
-    <thead class="table-dark">
-      <tr>
-        <th>Fecha</th>
-        <th>Origen</th>
-        <th>Destinatario</th>
-        <th>Monto</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>17/8/2023</td>
-        <td>Juan Pérez</td>
-        <td>Mi cuenta</td>
-        <td class="table-success">968.54</td>
-      </tr>
-      <tr>
-        <td>7/8/2023</td>
-        <td>Mi cuenta</td>
-        <td>Matías Gonzalez</td>
-        <td class="table-danger">549.62</td>
-      </tr>
-      <tr>
-        <td>2/8/2023</td>
-        <td>Juliana Martínez</td>
-        <td>Mi cuenta</td>
-        <td class="table-success">358.38</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+      </header>
+  <section class="principal">
+    <nav class="menu-desplegado">
+      <ul>
+          <li><a href="index.html"> Inicio <i class="fa-solid fa-house"></i></a></li>
+          <li><a href="cuentas.html">Cuentas <i class="fa-solid fa-credit-card"></i></a></li>
+          <li><a href="pagos.html">Pagos <i class="fa-solid fa-receipt"></i></a></li>
+          <li><a href="transferencias.html">Transferencias <i class="fa-solid fa-arrow-right-arrow-left"></i></a></li>
+          <li><a href="conversor.html">Conversor de monedas <i class="fa-solid fa-dollar-sign"></i></a></li>
+      </ul>
+  </nav>
+    <div class="container mt-3 tabla-bootstrap">
+      <h2>Transferencias enviadas/recibidas</h2>
+      <p>ATENCION: Recuerde verificar la identidad de los destinatarios y transferir solamente a personas de confianza. En caso de recibir transferencias por error, por favor contacte al banco inmediatamente.</p>            
+      <table class="table table-hover" id="tabla-pago">
+        <thead class="table-dark">
+          <tr>
+            <th>Fecha</th>
+            <th>Origen</th>
+            <th>Destinatario</th>
+            <th>Monto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>17/8/2023</td>
+            <td>Juan Pérez</td>
+            <td>Mi cuenta</td>
+            <td class="table-success">968.54</td>
+          </tr>
+          <tr>
+            <td>7/8/2023</td>
+            <td>Mi cuenta</td>
+            <td>Matías Gonzalez</td>
+            <td class="table-danger">549.62</td>
+          </tr>
+          <tr>
+            <td>2/8/2023</td>
+            <td>Juliana Martínez</td>
+            <td>Mi cuenta</td>
+            <td class="table-success">358.38</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 <footer>
     <p>Términos de uso</p>
     <p>Políticas de privacidad</p>

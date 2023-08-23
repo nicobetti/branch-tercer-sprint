@@ -10,7 +10,7 @@ header {
 footer {
     background-color: darkblue;
     color: whitesmoke;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 h1 {
@@ -39,6 +39,7 @@ li a {
 .principal {
     display: flex;
     flex-direction: column;
+    height: 65vh;
 }
 
 
@@ -47,10 +48,11 @@ li a {
     width: 70vw;
     padding: 10px;
     background-color: lightgrey;
-    align-self: center;
     display: flex;
+    align-self: center;
     justify-content: center;
     flex-direction: column;
+    margin: 15px;
 }
 
 .formulario {
@@ -82,6 +84,14 @@ li a {
 
 .menu-desplegado {
     display: none;
+    max-width: 250px;
+    height: 100%;
+    border-right: 1px solid black;
+    background-color: gray;
+}
+
+.menu-desplegado a {
+    color: white;
 }
 
 .dropdown {
@@ -103,19 +113,39 @@ li a {
     margin: 10px;
 }
 
-#cuenta {
+.cuenta {
     text-align: left;
     margin: 10px;
 }
 
+#cuentas {
+    width: 80%;
+}
+
+
 @media (min-width: 768px) {
-    
-    nav ul {
-        display:flex;
+
+    .principal {
         flex-direction: row;
+    }
+
+    .tabla-bootstrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 90%;
+    }
+
+    #tabla-pago {
+        width: 80%;
+    }
+
+    .menu-desplegado ul {
+        display:flex;
+        flex-direction: column;
         justify-content: space-around;
-        align-items: flex-end;
-        height: 100px;
+        align-items: flex-start;
     }
 
     .formulario label {
@@ -128,5 +158,9 @@ li a {
 
     .dropdown {
         display: none;
+    }
+
+    footer {
+        margin-top: 0px;
     }
 }
