@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>ITBANK-Transferencias</title>
+  <title>BANCO RÍO</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="">
+  <link rel="shortcut icon" href="images/icono.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="conversor.js"></script>
+  <script defer src="conversor.js"></script>
 </head>
 <body>
     <header>
@@ -21,23 +21,26 @@
                 <li><a href="pagos.html" class="dropdown-item">Pagos <i class="fa-solid fa-receipt"></i></a></li>
                 <li><a href="transferencias.html" class="dropdown-item">Transferencias <i class="fa-solid fa-arrow-right-arrow-left"></i></a></li>
                 <li><a href="conversor.html" class="dropdown-item">Conversor de monedas <i class="fa-solid fa-dollar-sign"></i></a></li>
+                <li><a href="simulador.html" class="dropdown-item">Simulador de préstamo <i class="fa-solid fa-piggy-bank"></i></a></li>
             </ul>
         </div>
         <img src="images/logo-itbank.png" alt="Logo del banco" class="logo img-fluid mx-auto d-block" id="foto-logo">
     </header>
     <section class="principal">
         <nav class="menu-desplegado">
-            <ul>
+            <ul class="lista">
                 <li><a href="index.html"> Inicio <i class="fa-solid fa-house"></i></a></li>
                 <li><a href="cuentas.html">Cuentas <i class="fa-solid fa-credit-card"></i></a></li>
                 <li><a href="pagos.html">Pagos <i class="fa-solid fa-receipt"></i></a></li>
                 <li><a href="transferencias.html">Transferencias <i class="fa-solid fa-arrow-right-arrow-left"></i></a></li>
                 <li><a href="conversor.html">Conversor de monedas <i class="fa-solid fa-dollar-sign"></i></a></li>
+                <li><a href="simulador.html">Simulador de préstamo <i class="fa-solid fa-piggy-bank"></i></a></li>
             </ul>
         </nav>
-        <article>
+        <article class="conversor">
             <h1> Conversor de monedas</h1>
-            <p> Indique las monedas y las cantidades para su conversión</p>
+            <h3> Indique las monedas y las cantidades para su conversión</h3>
+            <p>Atención: Todas las divisas serán convertidas a su valor oficial en el día de la fecha</p>
             <div>
                 <select name="moneda1" id="moneda1">
                     <option value="USD" selected>USD</option>
@@ -45,7 +48,7 @@
                     <option value="BRL">BRL</option>
                     <option value="ARS">ARS</option>
                 </select>
-                <input type="text" name="monto1" id="monto1" placeholder="1">
+                <input type="text" class="sin-borde" name="monto1" id="monto1" placeholder="0">
             </div>
             <div>
                 <select name="moneda2" id="moneda2">
@@ -54,7 +57,7 @@
                     <option value="BRL">BRL</option>
                     <option value="ARS" selected>ARS</option>
                 </select>
-                <input type="text" name="monto2" id="monto2">
+                <input type="text" class="sin-borde" name="monto2" id="monto2" placeholder="0">
             </div>
         </article>
     </section>

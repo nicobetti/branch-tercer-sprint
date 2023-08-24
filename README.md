@@ -2,6 +2,9 @@
 
 ## Integrantes del grupo: 
 Santiago Ance
+
 Mateo Brena
+
 Pablo Ferrarese
+
 Camila Vargas
