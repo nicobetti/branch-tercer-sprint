@@ -36,7 +36,7 @@ export default function Home() {
                       </Card.Body>
                   </Card>
                   <Card className={styles.tarjetasIndex}>
-                      <Card.Img variant="top" className="card-img-top" src="../images/modelo-celular.jpg" alt="Persona sosteniendo celular" width={450} height={300}/>
+                      <Card.Img variant="top" className="card-img-top" src="../images/modelo-celular.jpg" alt="Persona sosteniendo celular"/>
                       <Card.Body className="card-body">
                           <Card.Title className="card-title">Home Banking</Card.Title>
                           <Card.Text className="card-text">Nuestro home banking te permitirá estar conectado estés donde estés. Podrás realizar trámites, transferencias, chequear tus cuentas y mucho más desde la comodidad de tu hogar o incluso desde tu smartphone.</Card.Text>

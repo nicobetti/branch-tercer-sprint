@@ -1,6 +1,6 @@
 import "../css/Transfers.module.css"
-import Navbar from "./Navbar";
-import Header from "./Header";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 
 export default function Transfers() {
     return (
@@ -8,10 +8,10 @@ export default function Transfers() {
             <Header></Header>
             <div className="principal">
             <Navbar></Navbar>
-            <div className="container-lg mt-3 tabla-bootstrap" id="transferencias">
+            <div className="tabla-bootstrap" id="transferencias">
                 <h2>Transferencias enviadas/recibidas</h2>
                 <p><strong>ATENCION:</strong> Recuerde verificar la identidad de los destinatarios y transferir solamente a personas de confianza. En caso de recibir transferencias por error, por favor contacte al banco.</p>
-                <table className="table table-hover" id="tabla-pago1">
+                <table className="table table-hover" id="tabla-pago">
                     <thead className="table-dark">
                         <tr>
                             <th>Fecha</th>
