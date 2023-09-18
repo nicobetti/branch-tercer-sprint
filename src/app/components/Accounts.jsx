@@ -1,6 +1,6 @@
 import "../css/Accounts.css"
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
+import Link from 'next/link'
 import Header from "./Header";
 
 export default function Accounts() {
