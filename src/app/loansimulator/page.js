@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import "../css/LoanSimulator.css"
-import Navbar from "./Navbar";
-import Header from "./Header";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 
 export default function LoanSimulator(){
     const [capital, setCapital] = useState("")

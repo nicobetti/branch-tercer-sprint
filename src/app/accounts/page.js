@@ -1,5 +1,3 @@
-"use client"
-
 import "../css/Accounts.css"
 import Navbar from "../components/Navbar";
 import Link from 'next/link'

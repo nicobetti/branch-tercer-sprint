@@ -1,11 +1,13 @@
 "use client"
 
 import "../css/Conversor.css"
-import Navbar from "./Navbar";
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { useState, useEffect} from "react";
-import Header from "./Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShuffle } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function Conversor() {
     const [montoUno, setmontoUno] = useState("")
@@ -72,6 +74,7 @@ export default function Conversor() {
                 <div className="precio" id="precio">1 {monedaUno} es igual a {precios[monedaDos]} {monedaDos} </div>
             </article>
         </div>
+        <Footer></Footer>
         </>
         
     )
