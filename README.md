@@ -16,7 +16,7 @@ Camila Vargas
 Este es el link a nuestro espacio de trabajo en Trello: https://trello.com/b/LXV99wbU/banco-r%C3%ADo
 
 ## Tecnologías
-En el proyecto usamos los lenguajes de HTML5 JavaScript, CSS. La nueva interfaz utiliza React para renderizar las vistas y react-router-dom para hacer una navegación más rápida y eficiente. También utilizamos Bootstrap para algunas cuestiones de estilos y funcionalidad. La aplicación es responsive, preparada tanto para dispositivos móviles como para desktop.
+En el proyecto usamos los lenguajes de HTML5 JavaScript, CSS. La nueva interfaz utiliza React y NEXT para renderizar las vistas y react-router-dom para hacer una navegación más rápida y eficiente. También utilizamos Bootstrap para algunas cuestiones de estilos y funcionalidad. La aplicación es responsive, preparada tanto para dispositivos móviles como para desktop.
 
 ## Guía
 Una vez clonado el proyecto, debemos correr el comando "npm i" en la consola para descargar todas las dependencias necesarias para el correcto funcionamiento. Cuando ya estén instaladas todas las dependencias, el comando "npm start" debe ser ingresado en la consola para correr el proyecto en el navegador.
