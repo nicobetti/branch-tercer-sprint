@@ -22,7 +22,7 @@ export default function DropdownMenu() {
     const [open, setOpen] = useState(false);
     return (
         <>
-            <DropdownButton id="menu-dropdown" title="Dropdown button" variant="dark">
+            <DropdownButton id="menu-dropdown" title="Menu" variant="dark">
                 <Dropdown.Item><Link href="/" className="dropdown-item"><FontAwesomeIcon icon={faHouse}></FontAwesomeIcon> Inicio</Link></Dropdown.Item>
                 <Dropdown.Item><Link href="/accounts" className="dropdown-item"><FontAwesomeIcon icon={faCreditCard}></FontAwesomeIcon> Cuentas</Link></Dropdown.Item>
                 <Dropdown.Item><Link href="/payments" className="dropdown-item"><FontAwesomeIcon icon={faReceipt}></FontAwesomeIcon> Pagos</Link></Dropdown.Item>

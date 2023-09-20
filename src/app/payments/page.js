@@ -1,46 +1,37 @@
-import "../css/Payments.css";
+import style from "../css/Payments.module.css";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import PaymentTableRow from "../components/PaymentTableRow";
+import pagos from "../db/paymentsdb"
 
 
 export default function Payments() {
+    const payments = pagos
+
     return (
         <>
             <Header></Header>
             <div className="principal">
             <Navbar></Navbar>
-            <div className="container-lg mt-3 tabla-bootstrap" id="pagos">
+            <div className="container-lg mt-3 tabla-bootstrap" id={style.pagos}>
                 <h2>Pagos realizados</h2>
                 <p><strong>ATENCION:</strong> Algunos pagos pueden demorar hasta 24hs en verse reflejados.</p>
-                <table className="table table-hover" id="tabla-pago">
+                <table className="table table-hover" id={style.tablaPago}>
                     <thead className="table-dark">
                         <tr>
                             <th>Fecha</th>
                             <th className="oculto">Medio de pago</th>
                             <th className="oculto">Beneficiario</th>
                             <th>Importe</th>
+                            <th>Detalle</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>17/8/2023</td>
-                            <td className="oculto">Débito</td>
-                            <td className="oculto">ITBA</td>
-                            <td>$968.54</td>
-                        </tr>
-                        <tr>
-                            <td>7/8/2023</td>
-                            <td className="oculto">Crédito</td>
-                            <td className="oculto">Carrefour</td>
-                            <td>$549.62</td>
-                        </tr>
-                        <tr>
-                            <td>2/8/2023</td>
-                            <td className="oculto">Débito</td>
-                            <td className="oculto">YPF S.A</td>
-                            <td>$358.38</td>
-                        </tr>
+                    {payments.map((payment) => {
+                                return <PaymentTableRow id={payment.id} fecha={payment.fecha} medio={payment.medio}  
+                                beneficiario={payment.beneficiario} importe={payment.importe}></PaymentTableRow>
+                            })}
                     </tbody>
                 </table>
             </div>

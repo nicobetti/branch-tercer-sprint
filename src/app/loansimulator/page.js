@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import "../css/LoanSimulator.css"
-import Navbar from "../components/Navbar";
 import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 
 export default function LoanSimulator(){
     const [capital, setCapital] = useState("")
@@ -71,6 +73,7 @@ export default function LoanSimulator(){
             {mostrarAlerta ? <div id="alerta"> Debes completar todos los campos para realizar el cálculo</div> : <div></div>}
         </div>
         </div>
+        <Footer></Footer>
         </>
         
     )

@@ -2,8 +2,9 @@
 
 import Form from "react-bootstrap/Form"
 import "../css/NewTransfer.css"
-import Navbar from "../components/Navbar";
 import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { useState } from "react";
 
 export default function NewTransfers() {
@@ -21,7 +22,7 @@ export default function NewTransfers() {
                 <Navbar></Navbar>
                 <div className="contenedor-form">
                     <h1> Nueva transferencia</h1>
-                    <Form action="" className="formulario-transfer">
+                    <Form action="" method="" className="formulario-transfer">
                         <div className="destinatario-wrapper">
                             <label htmlFor="destinatario">Destinatario:</label>
                             <Form.Select name="identificacion" id="identificacion" value={destinatario} onChange={e => setDestinatario(e.target.value)}>
@@ -33,8 +34,8 @@ export default function NewTransfers() {
                         <div>
                             <label htmlFor="origen">Cuenta de origen:</label>
                             <Form.Select name="origen" id="origen" value={origen} onChange={e => setOrigen(e.target.value)}>
-                                <option value="ARS">CA $ARS 000215684156</option>
-                                <option value="USD">CA $USD 000215684157</option>
+                                <option value="Caja de ahorro ARS">CA $ARS 000215684156</option>
+                                <option value="Caja de ahorro USD">CA $USD 000215684157</option>
                             </Form.Select>
                         </div>
                         <div>
@@ -60,6 +61,7 @@ export default function NewTransfers() {
                     </Form>
                 </div>
             </div>
+            <Footer></Footer>
         </>
     )
 }

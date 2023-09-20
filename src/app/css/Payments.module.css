@@ -1,19 +1,27 @@
 #pagos {
     display: inline-flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.detalle a{
+    text-decoration: underline;
+    color: black;
 }
 
 @media (min-width: 768px) {
-    .tabla-bootstrap {
-        display: flex;
+    #pagos {
+        display: inline-flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        width: 80%;
     }
 
-    #tabla-pago {
+    #tablaPago {
         width: 80%;
     }
 }
+

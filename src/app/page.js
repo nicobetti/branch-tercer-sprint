@@ -1,12 +1,12 @@
 "use client"
 
 
-import React from 'react'
-import Image from 'next/image'
-import Card from 'react-bootstrap/Card'
-import styles from './page.module.css'
-import HomeHeader from './components/HomeHeader'
-import Footer from './components/Footer'
+import React from "react"
+import Image from "next/image"
+import Card from "react-bootstrap/Card"
+import styles from "./page.module.css"
+import HomeHeader from "./components/HomeHeader"
+import Footer from "./components/Footer"
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
           <HomeHeader></HomeHeader>
           <section>
               <div className="banner">
-                  <Image src="/../images/banner.png" alt="Frente de sucursal" className="d-block w-100" width={1200} height={500}/>
+                  <Image src="/../images/banner.png" alt="Foto de frente de sucursal" className="d-block w-100" width={1200} height={500}/>
               </div>
               <article className={styles.valores} >
                   <div className={styles.mision}>
