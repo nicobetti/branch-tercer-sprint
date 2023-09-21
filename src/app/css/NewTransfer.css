@@ -11,8 +11,15 @@
     margin: auto;
     margin-top: 2rem;
     border-radius: 25px;
-    text-align: center;
     width: 80%;
+}
+
+.formulario-transfer label {
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    text-align: center;
 }
 
 .boton-transferencia{

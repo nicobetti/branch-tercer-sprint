@@ -32,7 +32,7 @@ export default function Home() {
                       <Card.Img variant="top" className="card-img-top" src="../images/modelo-tarjeta.jpg" alt="Persona sosteniendo tarjeta" />
                       <Card.Body className="card-body">
                           <Card.Title className="card-title">Nuestros productos</Card.Title>
-                          <Card.Text className="card-text">Tenemos los mejores productos que se adaptan a tus necesidades. Tanto individuos como empresas podrán encontrar opciones al mejor precio del mercado</Card.Text>
+                          <Card.Text className="card-text">Tenemos los mejores productos que se adaptan a tus necesidades. Tanto individuos como empresas podrán encontrar opciones al mejor precio del mercado.</Card.Text>
                       </Card.Body>
                   </Card>
                   <Card className={styles.tarjetasIndex}>

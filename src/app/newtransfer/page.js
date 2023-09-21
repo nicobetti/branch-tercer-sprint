@@ -1,20 +1,21 @@
 "use client"
 
-import Form from "react-bootstrap/Form"
 import "../css/NewTransfer.css"
+import Form from "react-bootstrap/Form"
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useState } from "react";
 
-export default function NewTransfers() {
+ 
+
+export default function NewTransfer() {
     const [destinatario, setDestinatario] = useState("CBU")
-    const [origen, setOrigen] = useState("ARS")
+    const [origen, setOrigen] = useState("Caja de ahorro ARS")
     const [motivo, setMotivo] = useState("")
     const [monto, setMonto] = useState("")
     const [referencia, setReferencia] = useState("")
-
-
+    
     return (
         <>
             <Header></Header>
@@ -22,7 +23,7 @@ export default function NewTransfers() {
                 <Navbar></Navbar>
                 <div className="contenedor-form">
                     <h1> Nueva transferencia</h1>
-                    <Form action="" method="" className="formulario-transfer">
+                    <Form action="../db/transfersdb.js" method="POST" className="formulario-transfer">
                         <div className="destinatario-wrapper">
                             <label htmlFor="destinatario">Destinatario:</label>
                             <Form.Select name="identificacion" id="identificacion" value={destinatario} onChange={e => setDestinatario(e.target.value)}>

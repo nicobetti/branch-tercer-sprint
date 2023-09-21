@@ -29,7 +29,7 @@ export default function Payments() {
                     </thead>
                     <tbody>
                     {payments.map((payment) => {
-                                return <PaymentTableRow id={payment.id} fecha={payment.fecha} medio={payment.medio}  
+                                return <PaymentTableRow key={payment.id} id={payment.id} fecha={payment.fecha} medio={payment.medio}  
                                 beneficiario={payment.beneficiario} importe={payment.importe}></PaymentTableRow>
                             })}
                     </tbody>

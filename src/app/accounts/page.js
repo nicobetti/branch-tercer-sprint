@@ -1,7 +1,7 @@
 import "../css/Accounts.css"
-import Navbar from "../components/Navbar";
 import Link from 'next/link'
 import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Accounts() {
@@ -20,7 +20,7 @@ export default function Accounts() {
                 <div className="container p-2 bg-secondary text-white cada-cuenta">
                     <h4 >Caja de Ahorro en $USD</h4>
                     <p>Saldo: $***</p>
-                    <p>CBU: 000215684156</p>
+                    <p>CBU: 000223627091</p>
                     <Link href="" className="btn btn-primary">Ver detalle</Link>
                 </div>
                 <div className="container p-2 bg-secondary text-white cada-cuenta">

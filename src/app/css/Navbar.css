@@ -33,11 +33,23 @@
         font-size: 1rem;
     }
 
+    #opciones-pagos div a{
+        font-size: 1rem;
+    }
+
     .menu-desplegado a:focus, .menu-desplegado a:hover {
         color: #4D63B9;
     }
     
     #transfer-collapse-button {
+        background-color: white;
+        border: none;
+        color: #4D63B9;
+        font-size: 1.5rem;
+        padding: 0px;
+    }
+
+    #payment-collapse-button {
         background-color: white;
         border: none;
         color: #4D63B9;

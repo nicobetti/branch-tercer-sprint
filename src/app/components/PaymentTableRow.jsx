@@ -3,7 +3,7 @@ import style from "../css/Payments.module.css"
 
 export default function PaymentTableRow({id, fecha, medio ,beneficiario, importe}) {
     return (
-        <tr key={id}>
+        <tr>
             <td>{fecha}</td>
             <td className={style.oculto}>{medio}</td>
             <td className={style.oculto}>{beneficiario}</td>

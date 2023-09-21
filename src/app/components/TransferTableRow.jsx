@@ -3,7 +3,7 @@ import style from "../css/Transfers.module.css"
 
 export default function TransferTableRow({id, fecha, origen ,destinatario, monto}) {
     return (
-        <tr key={id}>
+        <tr>
             <td>{fecha}</td>
             <td className={style.oculto}>{origen}</td>
             <td className={style.oculto}>{destinatario}</td>
