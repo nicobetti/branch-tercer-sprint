@@ -1,33 +1,34 @@
 import Header from "@/app/components/Header"
 import Footer from "@/app/components/Footer"
 import Navbar from "@/app/components/Navbar"
-import transferencias from "@/app/db/transfersdb"
+import transfersRepo from "@/app/helpers/transfers-repo"
 import style from "./page.module.css"
 
 
 export default function TransferDetail({params}){
     
-    const transfers = transferencias
+    const transfers = transfersRepo.getAll()
 
     const selectedTransfer = transfers.filter((transfer) => {
       if(transfer.id == params.id) 
        return transfer
     })
+
     return (
         <>
             <Header></Header>
             <div className="principal">
             <Navbar></Navbar>
             <div className={style.detalle}>
-            <h1> Detalle de la transferencia {params.id}</h1>
+            <h1> Comprobante de transferencia </h1>
                 <ul className={style.lista}>
-                    <li>Transferencia número: {selectedTransfer[0].id}</li>
-                    <li>Fecha: {selectedTransfer[0].fecha}</li>
-                    <li>Origen: {selectedTransfer[0].origen}</li>
-                    <li>Destinatario: {selectedTransfer[0].destinatario}</li>
-                    <li>Monto: ${selectedTransfer[0].monto}</li>
-                    <li>Motivo: {selectedTransfer[0].motivo}</li>
-                    <li>Referencia: {selectedTransfer[0].referencia == "" ? "No se incluyó una referencia" : selectedTransfer[0].referencia}</li>
+                    <li>Transferencia número: <strong>{selectedTransfer[0].id}</strong></li>
+                    <li>Fecha: <strong>{selectedTransfer[0].fecha}</strong></li>
+                    <li>Origen: <strong>{selectedTransfer[0].origen}</strong></li>
+                    <li>Destinatario: <strong>{selectedTransfer[0].destinatario}</strong></li>
+                    <li>Monto: $<strong>{selectedTransfer[0].monto}</strong></li>
+                    <li>Motivo: <strong>{selectedTransfer[0].motivo}</strong></li>
+                    <li>Referencia: {selectedTransfer[0].referencia == "" ? "No se incluyó una referencia" : <strong>{selectedTransfer[0].referencia}</strong>}</li>
                 </ul>
             </div>
             </div>

@@ -3,11 +3,11 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PaymentTableRow from "../components/PaymentTableRow";
-import pagos from "../db/paymentsdb"
+import paymentsRepo from "../helpers/payments-repo";
 
 
 export default function Payments() {
-    const payments = pagos
+    const payments = paymentsRepo.getAll()
 
     return (
         <>

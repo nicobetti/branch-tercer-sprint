@@ -1,13 +1,13 @@
 import Header from "@/app/components/Header"
 import Footer from "@/app/components/Footer"
 import Navbar from "@/app/components/Navbar"
-import pagos from "@/app/db/paymentsdb"
+import paymentsRepo from "@/app/helpers/payments-repo"
 import style from "./page.module.css"
 
 
-export default function TransferDetail({params}){
+export default function PaymentDetail({params}){
     
-    const payments = pagos
+    const payments = paymentsRepo.getAll()
 
     const selectedPayment = payments.filter((payment) => {
       if(payment.id == params.id) 
@@ -19,14 +19,14 @@ export default function TransferDetail({params}){
             <div className="principal">
             <Navbar></Navbar>
             <div className={style.detalle}>
-            <h1> Detalle del pago {params.id}</h1>
+            <h1> Comprobante de pago </h1>
                 <ul className={style.lista}>
-                    <li>Pago número: {selectedPayment[0].id}</li>
-                    <li>Fecha: {selectedPayment[0].fecha}</li>
-                    <li>Medio: {selectedPayment[0].medio}</li>
-                    <li>Rubro: {selectedPayment[0].rubro}</li>
-                    <li>Beneficiario: {selectedPayment[0].beneficiario}</li>
-                    <li>Importe: ${selectedPayment[0].importe}</li>
+                    <li>Pago número: <strong>{selectedPayment[0].id}</strong> </li>
+                    <li>Fecha: <strong>{selectedPayment[0].fecha}</strong></li>
+                    <li>Medio: <strong>{selectedPayment[0].medio}</strong></li>
+                    <li>Rubro: <strong>{selectedPayment[0].rubro}</strong></li>
+                    <li>Beneficiario: <strong>{selectedPayment[0].beneficiario}</strong></li>
+                    <li>Importe: $<strong>{selectedPayment[0].importe}</strong></li>
                 </ul>
             </div>
             </div>

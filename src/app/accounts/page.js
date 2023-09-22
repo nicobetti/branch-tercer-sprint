@@ -1,44 +1,35 @@
 import "../css/Accounts.css"
-import Link from 'next/link'
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import AccountInfo from "../components/AccountInfo";
+import accountsRepo from "../helpers/accounts.helper";
+import cardsRepo from "../helpers/cards.helper";
+import CardsDetail from "../components/CardsDetail";
 
 export default function Accounts() {
+    const accounts = accountsRepo.getAll()
+
+    const cards = cardsRepo.getAll()
+
     return (
         <>
             <Header></Header>
             <div className="principal">
-            <Navbar></Navbar>
-            <div className="container-m m-3 contenedor-cuentas" >
-                <div className="container p-2 bg-secondary text-white cada-cuenta">
-                    <h4 >Caja de Ahorro en $ARS</h4>
-                    <p>Saldo: $***</p>
-                    <p>CBU: 000215684156</p>
-                    <Link href="" className="btn btn-primary">Ver detalle</Link>
-                </div>
-                <div className="container p-2 bg-secondary text-white cada-cuenta">
-                    <h4 >Caja de Ahorro en $USD</h4>
-                    <p>Saldo: $***</p>
-                    <p>CBU: 000223627091</p>
-                    <Link href="" className="btn btn-primary">Ver detalle</Link>
-                </div>
-                <div className="container p-2 bg-secondary text-white cada-cuenta">
-                    <h4 >Tarjeta terminada en 8004</h4>
-                    <p>Saldo: $***</p>
-                    <p>Vencimiento: 07/11</p>
-                    <Link href="" className="btn btn-primary">Ver detalle</Link>
-                </div>
-                <div className="container p-2 bg-secondary text-white cada-cuenta">
-                    <h4 >Tarjeta terminada en 4256</h4>
-                    <p>Saldo: $***</p>
-                    <p>Vencimiento: 09/11</p>
-                    <Link href="" className="btn btn-primary">Ver detalle</Link>
+                <Navbar></Navbar>
+                <div className="container-m m-3 contenedor-cuentas" >
+                    {accounts.map((account) => {
+                        return <AccountInfo key={account.id} id={account.id} cbu={account.cbu}
+                            alias={account.alias} info={account.info} saldo={account.saldo}></AccountInfo>
+                    })}
+                    {cards.map((card) => {
+                        return <CardsDetail key={card.id} id={card.id} ultimos={card.ultimos} tipo={card.tipo}
+                            marca={card.marca} vencimiento={card.vencimiento}></CardsDetail>
+                    })}
                 </div>
             </div>
-        </div>
-        <Footer></Footer>
+            <Footer></Footer>
         </>
-        
+
     )
 }

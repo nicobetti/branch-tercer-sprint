@@ -3,11 +3,11 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import TransferTableRow from "../components/TransferTableRow";
 import Footer from "../components/Footer";
-import transferencias from "../db/transfersdb";
+import transfersRepo from "../helpers/transfers-repo";
 
 export default function Transfers() {
 
-    const transfers = transferencias
+    const transfers = transfersRepo.getAll()
 
     return (
         <>

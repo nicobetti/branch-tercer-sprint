@@ -1,5 +1,8 @@
 .detalle {
     text-align: center;
+    background-color: lightgray;
+    border-radius: 25px;
+    padding: 1rem;
 }
 
 .lista {

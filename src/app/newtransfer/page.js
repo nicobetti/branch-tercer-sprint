@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useState } from "react";
+// import transfersRepo from "../helpers/transfers-repo";
 
  
 
@@ -15,7 +16,24 @@ export default function NewTransfer() {
     const [motivo, setMotivo] = useState("")
     const [monto, setMonto] = useState("")
     const [referencia, setReferencia] = useState("")
+
+/*     const nuevaTransfer =  {
+        method: 'POST',
+        body: {
+            origen: {origen},
+            destinatario: {destinatario},
+            monto: {monto},
+            motivo: {motivo},
+            referencia: {referencia}
+        },
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        }
+    } 
     
+    const handleSubmit = () => {
+        transfersRepo.create(nuevaTransfer)
+    } */
     return (
         <>
             <Header></Header>
@@ -23,7 +41,7 @@ export default function NewTransfer() {
                 <Navbar></Navbar>
                 <div className="contenedor-form">
                     <h1> Nueva transferencia</h1>
-                    <Form action="../db/transfersdb.js" method="POST" className="formulario-transfer">
+                    <Form  className="formulario-transfer">
                         <div className="destinatario-wrapper">
                             <label htmlFor="destinatario">Destinatario:</label>
                             <Form.Select name="identificacion" id="identificacion" value={destinatario} onChange={e => setDestinatario(e.target.value)}>
@@ -58,7 +76,7 @@ export default function NewTransfer() {
                             <label htmlFor="referencia">Referencia:</label>
                             <Form.Control type="text" id="referencia" name="referencia" value={referencia} onChange={e => setReferencia(e.target.value)} />
                         </div>
-                        <button className="boton-transferencia">Enviar</button>
+                        <button className="boton-transferencia" >Enviar</button>
                     </Form>
                 </div>
             </div>
