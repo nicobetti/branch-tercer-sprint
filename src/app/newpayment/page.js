@@ -13,6 +13,20 @@ export default function NewPayment() {
     const [medio, setMedio] = useState("Débito")
     const [importe, setImporte] = useState("")
 
+    async function handleSubmit(e) {
+        e.preventDefault();
+        var formData = new FormData(e.target);
+        const form_values = Object.fromEntries(formData);
+        // console.log('form values', form_values)
+        // paymentsRepo.create(form_values)
+
+        const res = await fetch('http://localhost:3000/api/transfer', {
+            method: 'POST',
+            body: JSON.stringify({ form_values }),
+        })
+    }
+
+    
     return (
         <>
             <Header></Header>
@@ -20,7 +34,7 @@ export default function NewPayment() {
                 <Navbar></Navbar>
                 <div className="contenedor-form">
                     <h1> Pagar factura </h1>
-                    <Form action="" method="POST" className="formulario-transfer">
+                    <Form action="" method="POST" className="formulario-transfer"  onSubmit={handleSubmit} >
                         <div>
                             <label htmlFor="rubro">Rubro:</label>
                             <Form.Select name="rubro" value={rubro} onChange={e => setRubro(e.target.value)}>
